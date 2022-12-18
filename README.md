@@ -1,7 +1,7 @@
 <h3>주제</h3>
 DC 모터 제어
 <h3>내용</h3>
-DC 모터의 회전수를 제어하는 모델을 설계하고 이를 이용하여 앞서 S_Hero에서 진행했던 프로젝트를 응용해보자.
+DC 모터를 simulink를 활용해 모델링하고 입력전압에 따른 회전수를 살펴보자.
 <h3>DC 모터 equation</h3>
 
 ![image](https://user-images.githubusercontent.com/87568714/208278298-65eb905a-53f6-47df-b65e-2708a4fe6f0d.png)
@@ -17,4 +17,16 @@ V_a = R * i + L * di/dt + V_emf ~~~~ di/dt = -R * i/L - K_emf * w/L + V_a/L</br>
 다음은 물리적인 부분의 방정식에 대해 생각해보자. 뉴턴의 제 2 법칙에 의하면 토크는 inertia 와 각가속도의 곱으로 표현된다.</br>
 이를 DC모터에 적용하면 J * dw/dt = T - K_f ~~~~ dw/dt = K_t * i/J - B * w/J - T_l/J이다.</br>
 
-<h3>DC 모터 equation</h3>
+<h3>DC 모터 Modeling</h3>
+위 두 방정식을 활용하여 아래와 같이 모델링하였다.
+
+![image](https://user-images.githubusercontent.com/87568714/208296366-84622032-2b0e-45ee-a4ae-b2b8e3ba350d.png)
+
+<h3>DC 모터 시뮬레이션</h3>
+입력전압 Va를 초기값이 1V이고 5초 뒤 최종값이 2V인 Step Function으로 주고 10초간 시뮬레이션 하였다.
+아래 그래프는 시간에 따른 모터의 RPM 그래프이다.
+
+![image](https://user-images.githubusercontent.com/87568714/208296411-4c2b260b-b7f9-4d80-a88a-f26be5485713.png)
+
+1에서 5초 동안 약 27RPM, 이후 전압이 증가하여 마찬가지로 RPM도 증가하다가 6초부터 54RPM인 것을 확인할 수 있다.
+따라서, 입력전압과 모터의 회전속도는 비례한다는 DC 모터의 특성을 잘 나타내고 있다. 
