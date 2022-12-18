@@ -11,6 +11,6 @@ DC 모터의 회전수를 제어하는 모델을 설계하고 이를 이용하�
 K_t는 자속밀도, K_emf는 모터의 역기전력 상수, B는 모터의 마찰계수, T_l은 부하의 토크이다.</br>
 Va 전압이 걸리면 저항과 인덕터에 전류가 흐르고 DC모터가 회전하게되는데 이때 역기전력 Vemf가 생성된다.</br>
 따라서 전기적인 부분의 방정식은 다음과 같이 표현할 수 있다.</br>
-V_a = R * i + L * di/dt + V_emf ~~~~> di/dt = -R*i/L - K_emf*w/L + V_a/L</br>
+V_a = R * i + L * di/dt + V_emf ~~~~ di/dt = -R*i/L - K_emf*w/L + V_a/L</br>
 다음은 물리적인 부분의 방정식에 대해 생각해보자. 뉴턴의 제 2 법칙에 의하면 토크는 inertia 와 각가속도의 곱으로 표현된다.</br>
-이를 DC모터에 적용하면 J*dw/dt = T - K_f ~~~~> dw/dt = K_t*i/J - B*w/J - T_l/J이다.</br>
+이를 DC모터에 적용하면 J*dw/dt = T - K_f ~~~~ dw/dt = K_t*i/J - B*w/J - T_l/J이다.</br>
