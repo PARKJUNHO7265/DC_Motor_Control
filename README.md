@@ -4,7 +4,7 @@ DC 모터 제어
 DC 모터를 simulink를 활용해 모델링하고 입력전압에 따른 회전수를 살펴보자.
 <h3>DC 모터 equation</h3>
 
-![image](https://user-images.githubusercontent.com/87568714/208278298-65eb905a-53f6-47df-b65e-2708a4fe6f0d.png)
+![image](https://user-images.githubusercontent.com/87568714/208296974-5a7811d3-b510-45c0-a306-ab4fd6a9ebf6.png)
 
 위 그림은 간단하게 표현한 DC모터 회로도이다.</br>
 여기서 Va는 입력전압, R은 저항, L은 인덕터, V_emf는 역기전력, K_f는 부하저항, w는 각속도, T는 모터의 토크,</br>
