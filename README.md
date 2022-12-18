@@ -23,7 +23,7 @@ V_a = R * i + L * di/dt + V_emf ~~~~ di/dt = -R * i/L - K_emf * w/L + V_a/L</br>
 ![image](https://user-images.githubusercontent.com/87568714/208296366-84622032-2b0e-45ee-a4ae-b2b8e3ba350d.png)
 
 <h3>DC 모터 시뮬레이션</h3>
-입력전압 Va를 초기값이 1V이고 5초 뒤 최종값이 2V인 Step Function으로 주고 10초간 시뮬레이션 하였다.</br>
+입력전압 Va를 초기값이 12V이고 5초 뒤 최종값이 24V인 Step Function으로 주고 10초간 시뮬레이션 하였다.</br>
 아래 그래프는 시간에 따른 모터의 RPM 그래프이다.
 
 ![image](https://user-images.githubusercontent.com/87568714/208296411-4c2b260b-b7f9-4d80-a88a-f26be5485713.png)
